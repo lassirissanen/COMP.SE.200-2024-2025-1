@@ -1,4 +1,5 @@
 import filter from "../filter";
+
 describe("filter", () => {
   test("filters an array based on a predicate", () => {
     const input = [1, 2, 3, 4, 5];
@@ -35,16 +36,6 @@ describe("filter", () => {
     expect(result).toEqual([1, 2, 3, 4]);
   });
 
-  test("handles null input", () => {
-    const result = filter(null, () => true);
-    expect(result).toEqual([]);
-  });
-
-  test("handles undefined input", () => {
-    const result = filter(undefined, () => true);
-    expect(result).toEqual([]);
-  });
-
   test("works with objects in array", () => {
     const users = [
       { user: "barney", active: true },
@@ -64,5 +55,40 @@ describe("filter", () => {
     const input = [1, 2, 3];
     const result = filter(input, () => true);
     expect(result).not.toBe(input);
+  });
+
+  test("handles predicate that returns non boolean value", () => {
+    const input = [1, 2, 3];
+    const result = filter(input, () => 1);
+    expect(result).toEqual(input);
+  });
+});
+
+describe("filter negative", () => {
+  test("handles null array", () => {
+    const result = filter(null, () => true);
+    expect(result).toEqual([]);
+  });
+
+  test("handles undefined array", () => {
+    const result = filter(undefined, () => true);
+    expect(result).toEqual([]);
+  });
+
+  test("handles null predicate", () => {
+    const result = filter([], null);
+    expect(result).toEqual([]);
+  });
+
+  test("handles undefined predicate", () => {
+    const input = [1, 2, 3];
+    const result = filter(input, undefined);
+    expect(result).toEqual([]);
+  });
+
+  test("handles predicate without return value", () => {
+    const input = [1, 2, 3];
+    const result = filter(input, () => {});
+    expect(result).toEqual([]);
   });
 });
