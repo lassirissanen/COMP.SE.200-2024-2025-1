@@ -1,6 +1,6 @@
 import upperFirst from "../upperFirst";
 
-describe("upperFirst", () => {
+describe("upperFirst positive", () => {
   test("converts the first character of a lowercase string to uppercase", () => {
     expect(upperFirst("fred")).toBe("Fred");
   });
@@ -44,8 +44,18 @@ describe("upperFirst", () => {
   test("handles null input", () => {
     expect(upperFirst(null)).toBe("");
   });
+});
 
-  test("Throws an error with non-string input", () => {
+describe("upperFirst negative", () => {
+  test("number input throws an error", () => {
     expect(() => upperFirst(123)).toThrow();
+  });
+
+  test("object input throws an error", () => {
+    expect(() => upperFirst({})).toThrow();
+  });
+
+  test("array input throws an error", () => {
+    expect(() => upperFirst([])).toThrow();
   });
 });
