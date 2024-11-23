@@ -23,15 +23,15 @@ describe("get positive", () => {
     expect(get(testObject, "a[0].b.c", "default")).toBe(3);
   });
 
-  test("returns undefined for empty path", () => {
+  test("returns undefined with empty string path", () => {
     expect(get(testObject, "")).toBeUndefined();
   });
 
-  test("returns undefined for empty array path", () => {
+  test("returns undefined with empty array path", () => {
     expect(get(testObject, [])).toBeUndefined();
   });
 
-  test("handles numeric path for arrays", () => {
+  test("returns correct element with array index", () => {
     const arrObject = [1, 2, 3];
     expect(get(arrObject, "1")).toBe(2);
   });
@@ -67,27 +67,27 @@ describe("get positive", () => {
 });
 
 describe("get negative", () => {
-  test("returns undefined null object", () => {
-    expect(get(null, "a.b.c")).toBe(undefined);
+  test("returns undefined with null object", () => {
+    expect(get(null, "a.b.c")).toBeUndefined();
   });
 
-  test("returns undefined undefined object", () => {
-    expect(get(undefined, "a.b.c")).toBe(undefined);
+  test("returns undefined with undefined object", () => {
+    expect(get(undefined, "a.b.c")).toBeUndefined();
   });
 
   test("returns undefined with null path", () => {
-    expect(get(testObject, null)).toBe(undefined);
+    expect(get(testObject, null)).toBeUndefined();
   });
 
   test("returns undefined with undefined path", () => {
-    expect(get(testObject, undefined)).toBe(undefined);
+    expect(get(testObject, undefined)).toBeUndefined();
   });
 
-  test("returns default null object", () => {
+  test("returns default with null object", () => {
     expect(get(null, "a.b.c", "default")).toBe("default");
   });
 
-  test("returns default undefined object", () => {
+  test("returns default with undefined object", () => {
     expect(get(undefined, "a.b.c", "default")).toBe("default");
   });
 
