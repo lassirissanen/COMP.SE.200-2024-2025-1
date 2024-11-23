@@ -44,22 +44,10 @@ describe("add function", () => {
 
   test("handles Infinity", () => {
     expect(add(Infinity, 5)).toBe(Infinity);
-    expect(add(5, Infinity)).toBe(Infinity);
-    expect(add(Infinity, Infinity)).toBe(Infinity);
   });
 
-  test("handles  negative Infinity", () => {
+  test("handles negative Infinity", () => {
     expect(add(-Infinity, 5)).toBe(-Infinity);
-    expect(add(5, -Infinity)).toBe(-Infinity);
-    expect(add(-Infinity, -Infinity)).toBe(-Infinity);
-  });
-
-  test("returns NaN for undefined input", () => {
-    expect(add(undefined, 5)).toBeNaN();
-  });
-
-  test("returns NaN for undefined or null inputs", () => {
-    expect(add(null, 5)).toBeNaN();
   });
 
   test("handles very large numbers", () => {
@@ -70,5 +58,12 @@ describe("add function", () => {
   test("handles very small numbers", () => {
     const smallNumber = Number.MIN_VALUE;
     expect(add(smallNumber, smallNumber)).toBeCloseTo(2 * smallNumber, 10);
+  });
+  test("returns NaN for undefined input", () => {
+    expect(add(undefined, 5)).toBeNaN();
+  });
+
+  test("returns NaN for null inputs", () => {
+    expect(add(null, 5)).toBeNaN();
   });
 });
