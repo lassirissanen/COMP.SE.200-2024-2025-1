@@ -76,23 +76,23 @@ describe("words positive", () => {
 });
 
 describe("words negative", () => {
-  test("returns empty array for null input", () => {
-    expect(words(null)).toEqual([]);
+  test("null input throws an error", () => {
+    expect(() => words(null)).toThrow();
   });
 
-  test("returns empty array for undefined input", () => {
-    expect(words(undefined)).toEqual([]);
+  test("undefined input throws an error", () => {
+    expect(() => words(undefined)).toThrow();
   });
 
-  test("returns empty array for non string input", () => {
-    expect(words(123)).toEqual([]);
+  test("number input throws an error", () => {
+    expect(() => words(123)).toThrow();
   });
 
-  test("returns empty array for object input", () => {
-    expect(words({})).toEqual([]);
+  test("object input throws an error", () => {
+    expect(() => words({})).toThrow();
   });
 
-  test("returns empty array for array input", () => {
-    expect(words([])).toEqual([]);
+  test("array input throws an error", () => {
+    expect(() => words([])).toThrow();
   });
 });
