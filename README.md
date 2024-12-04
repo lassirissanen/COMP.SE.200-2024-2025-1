@@ -11,3 +11,25 @@ and LICENSE file.
 Source code folder contains a separate license file that must **NOT** be removed under any circumstances!
 Removing this license file directly violates terms and conditions of the software under testing.
 Individuals who remove or modify the license file will also carry the consequences.
+
+## Running the tests
+
+Verified to work with Node.js version 16.0.0
+
+Install packages
+
+```SH
+npm install
+```
+
+Run tests
+
+```SH
+npm test
+```
+
+Run tests and calculate test coverage
+
+```SH
+npm run test-coverage
+```
