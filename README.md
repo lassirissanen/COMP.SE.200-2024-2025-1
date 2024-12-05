@@ -33,3 +33,5 @@ Run tests and calculate test coverage
 ```SH
 npm run test-coverage
 ```
+
+[![Coverage Status](https://coveralls.io/repos/github/lassirissanen/COMP.SE.200-2024-2025-1/badge.svg?branch=main)](https://coveralls.io/github/lassirissanen/COMP.SE.200-2024-2025-1?branch=main)
