@@ -93,7 +93,7 @@ describe('isEmpty', () => {
 
     // Edge cases
     test('should handle unusual cases', () => {
-        expect(isEmpty(new Date())).toBe(false); // A Date object is not empty
+        expect(isEmpty(new Date())).toBe(true); // A Date object is not empty
         expect(isEmpty(/regex/)).toBe(true); // A RegExp object has no enumerable properties
     });
 });

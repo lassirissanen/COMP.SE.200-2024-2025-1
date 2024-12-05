@@ -34,3 +34,6 @@ jobs:
 
       - name: Collect coverage
         run: npm run coverage
+
+      - name: Coveralls GitHub Action
+        uses: coverallsapp/github-action@v2.3.4
