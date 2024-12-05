@@ -62,9 +62,7 @@ describe("filter positive", () => {
     const result = filter(input, (val) => val);
     expect(result).toEqual([-1, 1, 2, "abc"]);
   });
-});
 
-describe("filter negative", () => {
   test("null array throws an error", () => {
     expect(() => filter(null, () => true)).toThrow();
   });

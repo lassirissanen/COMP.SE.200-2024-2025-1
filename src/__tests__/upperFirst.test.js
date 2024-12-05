@@ -44,9 +44,7 @@ describe("upperFirst positive", () => {
   test("handles null input", () => {
     expect(upperFirst(null)).toBe("");
   });
-});
 
-describe("upperFirst negative", () => {
   test("number input throws an error", () => {
     expect(() => upperFirst(123)).toThrow();
   });

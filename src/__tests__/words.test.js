@@ -73,9 +73,7 @@ describe("words positive", () => {
   test("handles custom pattern", () => {
     expect(words("a1 b2 c3", /\d/g)).toEqual(["1", "2", "3"]);
   });
-});
 
-describe("words negative", () => {
   test("null input throws an error", () => {
     expect(() => words(null)).toThrow();
   });

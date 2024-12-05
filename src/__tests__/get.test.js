@@ -64,9 +64,7 @@ describe("get positive", () => {
     };
     expect(get(complexObject, "a.b[0].c.d[1].e")).toBe(42);
   });
-});
 
-describe("get negative", () => {
   test("returns undefined with null object", () => {
     expect(get(null, "a.b.c")).toBeUndefined();
   });
