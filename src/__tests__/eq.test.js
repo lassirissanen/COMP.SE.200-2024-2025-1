@@ -9,7 +9,7 @@ describe('eq', () => {
         expect(eq(false, false)).toBe(true);
     });
 
-    test.skip('should return false for non-equivalent primitive values', () => {
+    test('should return false for non-equivalent primitive values', () => {
         expect(eq(1, 2)).toBe(false);
         expect(eq('a', 'b')).toBe(false);
         expect(eq(true, false)).toBe(false);
