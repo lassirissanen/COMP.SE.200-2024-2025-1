@@ -1,6 +1,6 @@
 import filter from "../filter";
 
-describe("filter positive", () => {
+describe("filter", () => {
   test("filters an array based on a predicate", () => {
     const input = [1, 2, 3, 4, 5];
     const result = filter(input, (num) => num % 2 === 0);

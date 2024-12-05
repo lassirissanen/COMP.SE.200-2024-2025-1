@@ -1,6 +1,6 @@
 import words from "../words";
 
-describe("words positive", () => {
+describe("words", () => {
   test("splits string into words with default pattern", () => {
     expect(words("fred, barney, & pebbles")).toEqual([
       "fred",

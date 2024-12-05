@@ -2,7 +2,7 @@ import get from "../get";
 
 const testObject = { a: [{ b: { c: 3 } }] };
 
-describe("get positive", () => {
+describe("get", () => {
   test("retrieves nested value using dot notation", () => {
     expect(get(testObject, "a[0].b.c")).toBe(3);
   });

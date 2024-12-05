@@ -1,6 +1,6 @@
 import upperFirst from "../upperFirst";
 
-describe("upperFirst positive", () => {
+describe("upperFirst", () => {
   test("converts the first character of a lowercase string to uppercase", () => {
     expect(upperFirst("fred")).toBe("Fred");
   });
