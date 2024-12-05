@@ -37,6 +37,8 @@ jobs:
 
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v2.3.4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload coverage to Coveralls
         run: npx coveralls < coverage/lcov.info
