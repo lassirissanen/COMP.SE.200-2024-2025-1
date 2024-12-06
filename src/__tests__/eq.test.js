@@ -33,7 +33,7 @@ describe('eq', () => {
     });
 
     // Object wrappers and primitives
-    test.skip('should return false for primitive and object wrapper comparisons', () => {
+    test('should return false for primitive and object wrapper comparisons', () => {
         expect(eq('a', Object('a'))).toBe(false);
         expect(eq(1, Object(1))).toBe(false);
         expect(eq(true, Object(true))).toBe(false);
@@ -48,7 +48,7 @@ describe('eq', () => {
         expect(eq(undefined, undefined)).toBe(true);
     });
 
-    test.skip('should return false for null compared with undefined', () => {
+    test('should return false for null compared with undefined', () => {
         expect(eq(null, undefined)).toBe(false);
     });
 

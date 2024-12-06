@@ -17,7 +17,7 @@ describe('ceil', () => {
         expect(ceil(5)).toBe(5);
     });
 
-    test.skip('should handle invalid input gracefully', () => {
+    test('should handle invalid input gracefully', () => {
         expect(() => ceil('abc')).toThrow();
     });
 });

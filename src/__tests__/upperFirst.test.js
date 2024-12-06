@@ -21,7 +21,7 @@ describe("upperFirst", () => {
     expect(upperFirst("123abc")).toBe("123abc");
   });
 
-  test.skip("handles strings with leading whitespace", () => {
+  test("handles strings with leading whitespace", () => {
     expect(upperFirst("  hello")).toBe("  Hello");
   });
 
